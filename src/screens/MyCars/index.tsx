@@ -4,6 +4,8 @@ import { BackButton } from '../../components/BackButton';
 import { CarDTO } from '../../dtos/CarDTO';
 import api from '../../services/api';
 
+import { LoadAnimation } from '../../components/LoadAnimation';
+
 import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 
@@ -80,7 +82,7 @@ export function MyCars() {
 
       </Header>
 
-      {loading ? <Load /> :
+      {loading ? <LoadAnimation /> :
 
         <Content>
           <Appointments>
